@@ -19,7 +19,7 @@
 
     <!-- NAVBAR SECTION -->
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-4">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-4 fixed-top">
         <!--p pour paddinf y pour axe vertical uniquement et 4-->
         <div class="container">
             <a href="#" class="navbar-brand">Bootstrap Projet</a>
@@ -93,20 +93,193 @@
 
     <section class="p-5">
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-center g-4">
+                <!--g-4 pour la propriété css GAP pour ajouter de l'espace entre les cards-->
                 <!-- class row pour activer la grid, text center pour aligner le texte dans les div et non pas justify content center pour aligner le texte, si je met justify content center ce sont les div que je veux aligner-->
-                <div class="col-sm">
+                <div class="col-md">
                     <div class="card bg-dark text-light">
-                        TEST
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <!--avec la classe h1 dans une div je peux donner la hauteur d'une h1 à l'élément enfant , ici l'icon laptop qui apparait plus grand-->
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <!--Mettre le lien cdn dans html icons et bi pour bootstratp icons-->
+                            <h3 class="card-title mb-3">
+                                Virtual
+                            </h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Iure, quas quidem possimus dolorum esse eligendi?
+                            </p>
+                            <a href="" class="btn btn-primary">Read More</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm">333</div>
-                <div class="col-sm">333</div>
+
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <!--avec la classe h1 dans une div je peux donner la hauteur d'une h1 à l'élément enfant , ici l'icon laptop qui apparait plus grand-->
+                                <i class="bi bi-person-square"></i>
+                            </div>
+                            <!--Mettre le lien cdn dans html icons et bi pour bootstratp icons-->
+                            <h3 class="card-title mb-3">
+                                Hybrid
+                            </h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Iure, quas quidem possimus dolorum esse eligendi?
+                            </p>
+                            <a href="" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <!--avec la classe h1 dans une div je peux donner la hauteur d'une h1 à l'élément enfant , ici l'icon laptop qui apparait plus grand-->
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <!--Mettre le lien cdn dans html icons et bi pour bootstratp icons-->
+                            <h3 class="card-title mb-3">
+                                In person
+                            </h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Iure, quas quidem possimus dolorum esse eligendi?
+                            </p>
+                            <a href="" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
+    <!-- Learn sections -->
+
+    <section id="learn" class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <!--La div va se stacker quand je serais en dessous des dimensions md, sinon tout se met en row la propriété de base parente-->
+                    <img src="img/fundamentals.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md p-5">
+                    <h2>
+                        Learn the fundamentals
+                    </h2>
+                    <p class="lead">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores eveniet debitis saepe
+                        praesentium quas. Ut!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ullam dolore illum fugiat
+                        magnam alias corporis eveniet saepe odit temporibus, possimus iure et excepturi sapiente.
+                    </p>
+                    <a href="" class="btn btn-secondary mt-3">
+                        <i class="bi bi-chevron-right"></i> Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="learn" class="p-5 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">
+                    <h2>
+                        Learn the fundamentals
+                    </h2>
+                    <p class="lead">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores eveniet debitis saepe
+                        praesentium quas. Ut!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ullam dolore illum fugiat
+                        magnam alias corporis eveniet saepe odit temporibus, possimus iure et excepturi sapiente.
+                    </p>
+                    <a href="" class="btn btn-primary mt-3">
+                        <i class="bi bi-chevron-right"></i> Read More
+                    </a>
+                </div>
+                <div class="col-md">
+                    <!--La div va se stacker quand je serais en dessous des dimensions md, sinon tout se met en row la propriété de base parente-->
+                    <img src="img/react.svg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion question section -->
+
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">
+                Frequently asked Questions
+            </h2>
+            <div class="accordion accordion-flush" id="questions">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-one" aria-expanded="false" aria-controls="question-one">
+                            Where a you located ?
+                        </button>
+                    </h2>
+                    <div id="question-one" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#questions">
+                        <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+                            odit asperiores iste laudantium nihil unde soluta optio quia, voluptates ullam deleniti in
+                            sunt neque iusto! Ratione consectetur eum beatae consequuntur, nisi aperiam? Voluptas
+                            dolores distinctio provident facere doloremque, nam a eaque consequatur, libero omnis nisi
+                            minima cupiditate corporis aut ipsam.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-two" aria-expanded="false" aria-controls="question-2">
+                            What do i need to know ?
+                        </button>
+                    </h2>
+                    <div id="question-two" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+                            inventore facere repellendus molestias alias odio, mollitia dolorem. Recusandae quaerat,
+                            quisquam est nostrum harum dignissimos voluptatibus facilis ea? Repellat explicabo a quo
+                            doloribus? Amet impedit, libero sunt id laboriosam commodi aut?
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-three" aria-expanded="false" aria-controls="question-3">
+                            What do in need ?
+                        </button>
+                    </h2>
+                    <div id="question-three" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                            excepturi eveniet, tenetur asperiores ratione autem quisquam? Quidem vel aliquid ipsa
+                            laborum? Quaerat nihil minus magnam quasi placeat, omnis, atque illo totam dolorum nobis
+                            maxime dignissimos temporibus culpa rem dolorem laboriosam.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

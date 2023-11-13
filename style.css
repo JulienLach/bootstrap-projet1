@@ -1,3 +1,11 @@
+body::before {
+    display: block;
+    content: '';
+    /*quand je met la pseudo class ::before je suis obligé de mettre la propriété content mais vide, ici je veux juste un contenu vide mais d'un hauteur de 60px pour que la nav bar ne se superpose pas à l'image*/
+    height: 60px;
+}
+
+
 @media (min-width: 768px) {
 
     .news-input {
